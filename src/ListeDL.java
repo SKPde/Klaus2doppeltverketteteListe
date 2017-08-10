@@ -21,8 +21,9 @@ public class ListeDL {
 		String ausgabe = "";
 		ElementDL temp = kopf;
 
-		while (temp != null) {
-			ausgabe = ausgabe + " " + temp.inhalt.toString();
+		while(temp != null) {
+			ausgabe = ausgabe + " " + temp.inhalt;
+			temp = temp.nach;
 		}
 
 		return ausgabe;
