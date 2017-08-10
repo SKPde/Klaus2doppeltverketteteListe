@@ -14,6 +14,13 @@ public class ListeDL {
 	private ElementDL ende; // Referenz auf das Ende der Liste
 
 	public void endElementNachVorne() {
+		ende.nach = kopf;
+		kopf.vorg = ende;
+		ende = ende.vorg;
+		kopf = ende.nach;
+		ende.nach = null;
+		kopf.vorg = null;
+		
 
 	}
 
@@ -53,6 +60,10 @@ public class ListeDL {
 		liste.einfuegen((int) 22);
 		liste.einfuegen((int) 78);
 
+		System.out.println(liste);
+		
+		liste.endElementNachVorne();
+		
 		System.out.println(liste);
 	}
 
