@@ -30,7 +30,7 @@ public class ListeDL {
 
 	public void einfuegen(Object eingabe) {
 		ElementDL temp = new ElementDL(eingabe);
-		if (kopf == null) {
+		if (kopf == null && ende == null) {
 			kopf = temp;
 			temp.vorg = null;
 			ende = temp;
